@@ -31,7 +31,7 @@ const FlashForwardFolder: React.FC<AppContentProps> = ({ onOpenApp }) => {
         onOpenApp(
           item.appId,
           <StatsPage onContinue={onBack || (() => {})} />,
-          undefined,
+          item.name,
           position
         );
       } else {
