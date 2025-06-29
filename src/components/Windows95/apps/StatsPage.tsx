@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { posthog } from '../../../lib/posthog';
 
 /**
@@ -568,6 +568,7 @@ const StatsPage: React.FC<StatsPageProps> = ({ onContinue }) => {
         </div>
       ) : (
         <>
+          {/* Client Metrics */}
           <div className="win95-stats-metrics">
             <div className="win95-stats-metric">
               <div className="win95-stats-metric-icon" style={{ backgroundColor: '#000080' }}>
