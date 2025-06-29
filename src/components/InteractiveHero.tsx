@@ -91,6 +91,7 @@ const InteractiveHero: React.FC = () => {
   const dotsRef = useRef<any[]>([]);
   const mousePositionRef = useRef<{ x: number | null; y: number | null }>({ x: null, y: null });
   const [showVideo, setShowVideo] = useState(false);
+  const [showWorkPopup, setShowWorkPopup] = useState(false);
 
   const handleMouseMove = useCallback((event: MouseEvent) => {
     const canvas = canvasRef.current;
@@ -140,6 +141,7 @@ const InteractiveHero: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex gap-4"
         >
           <div onClick={() => setShowVideo(true)} className="cursor-pointer">
             <HoverBorderGradient
@@ -148,6 +150,16 @@ const InteractiveHero: React.FC = () => {
               duration={1.5}
             >
               watch video
+            </HoverBorderGradient>
+          </div>
+          
+          <div onClick={() => window.location.href = '#work'} className="cursor-pointer">
+            <HoverBorderGradient
+              className="text-xl font-light tracking-tight"
+              containerClassName="scale-110"
+              duration={1.5}
+            >
+              latest work
             </HoverBorderGradient>
           </div>
         </motion.div>
