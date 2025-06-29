@@ -620,6 +620,16 @@ const StatsPage: React.FC<StatsPageProps> = ({ onContinue }) => {
               <li>Faster loading times and smoother animations</li>
               <li>Enhanced security and reliability</li>
             </ul>
+            
+            <div style={{ marginTop: '20px', padding: '15px', border: '1px solid #000080', background: '#e0f0ff' }}>
+              <h4 style={{ color: '#000080', marginTop: 0 }}>Did you know?</h4>
+              <ul style={{ marginBottom: 0 }}>
+                <li>Websites with modern designs convert 68% better than outdated ones</li>
+                <li>Each additional second of page load time reduces conversions by 7%</li>
+                <li>Interactive elements increase user engagement by 200-300%</li>
+                <li>AI-powered features can boost customer satisfaction by 35%</li>
+              </ul>
+            </div>
           </div>
           
           <div className="win95-stats-actions">
@@ -632,6 +642,154 @@ const StatsPage: React.FC<StatsPageProps> = ({ onContinue }) => {
           </div>
         </>
       )}
+
+      <style jsx>{`
+        .win95-stats-page {
+          padding: 10px;
+          height: 100%;
+          overflow-y: auto;
+          background: var(--win95-window-bg);
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .win95-stats-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 15px;
+          padding: 5px;
+          border: 1px solid var(--win95-border-inner-dark);
+          background: white;
+        }
+        
+        .win95-stats-logo {
+          width: 32px;
+          height: 32px;
+        }
+        
+        .win95-stats-title {
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0;
+        }
+        
+        .win95-stats-loading {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .win95-stats-loading-text {
+          margin-bottom: 10px;
+        }
+        
+        .win95-stats-progress-container {
+          width: 80%;
+          height: 20px;
+          border: 2px solid;
+          border-color: var(--win95-border-outer-dark) var(--win95-border-outer-light) var(--win95-border-outer-light) var(--win95-border-outer-dark);
+          background: white;
+          margin-bottom: 5px;
+        }
+        
+        .win95-stats-progress-bar {
+          height: 100%;
+          background-color: #000080;
+          transition: width 0.3s;
+        }
+        
+        .win95-stats-loading-percent {
+          font-size: 12px;
+        }
+        
+        .win95-stats-metrics {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          margin-bottom: 15px;
+        }
+        
+        .win95-stats-metric {
+          border: 2px solid;
+          border-color: var(--win95-border-outer-light) var(--win95-border-outer-dark) var(--win95-border-outer-dark) var(--win95-border-outer-light);
+          background: white;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        
+        .win95-stats-metric-icon {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 18px;
+        }
+        
+        .win95-stats-metric-content {
+          flex: 1;
+        }
+        
+        .win95-stats-metric-value {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        
+        .win95-stats-metric-label {
+          font-size: 12px;
+        }
+        
+        .win95-stats-info {
+          border: 2px solid;
+          border-color: var(--win95-border-outer-light) var(--win95-border-outer-dark) var(--win95-border-outer-dark) var(--win95-border-outer-light);
+          background: white;
+          padding: 10px;
+          margin-bottom: 15px;
+        }
+        
+        .win95-stats-info h3 {
+          font-size: 14px;
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+        
+        .win95-stats-info p {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        
+        .win95-stats-info ul {
+          font-size: 12px;
+          margin: 0;
+          padding-left: 20px;
+        }
+        
+        .win95-stats-actions {
+          display: flex;
+          justify-content: center;
+          margin-top: auto;
+          padding-top: 15px;
+        }
+        
+        .win95-stats-continue {
+          padding: 8px 16px;
+          font-weight: bold;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+          .win95-stats-metrics {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
     </div>
   );
 };
